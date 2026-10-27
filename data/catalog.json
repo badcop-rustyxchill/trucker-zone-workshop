@@ -1,0 +1,1774 @@
+{
+  "version": 1,
+  "coordinateSystem": "Unity local metres, +Y up; GLB geometry has Z reflected",
+  "source": "Locally installed Rust monument manifest and extracted prefab models",
+  "monuments": [
+    {
+      "id": "swamp_c",
+      "key": "swamp_c.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/swamp/swamp_c.prefab",
+      "name": "Abandoned Cabins",
+      "category": "Swamp",
+      "model": "models/pack-detail-monuments-swamp-c-5b501309c9a6-near.glb",
+      "triangles": 112068,
+      "bounds": [
+        [
+          -36.28278945585021,
+          -17.83649710749031,
+          -56.69625379772536
+        ],
+        [
+          66.76283087968203,
+          10.501856383742602,
+          50.07360828262297
+        ]
+      ],
+      "terrain": "data/terrain/swamp_c-08e98b9d.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        7.0317
+      ],
+      "terrainSize": {
+        "x": 200.0,
+        "y": 600.0,
+        "z": 200.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "desert_military_base_a",
+      "key": "desert_military_base_a.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/military_bases/desert_military_base_a.prefab",
+      "name": "Abandoned Military Base\n",
+      "category": "Military Bases",
+      "model": "models/pack-detail-monuments-desert-military-base-a-794fad948efe-near.glb",
+      "triangles": 235396,
+      "bounds": [
+        [
+          -48.2117630670366,
+          -1.293549599970891,
+          -50.95037894527141
+        ],
+        [
+          45.96251405739514,
+          7.011884073596491,
+          44.21440499770001
+        ]
+      ],
+      "terrain": "data/terrain/desert_military_base_a-897aeea0.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        0.879
+      ],
+      "terrainSize": {
+        "x": 350.0,
+        "y": 60.0,
+        "z": 350.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "desert_military_base_b",
+      "key": "desert_military_base_b.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/military_bases/desert_military_base_b.prefab",
+      "name": "Abandoned Military Base · desert military base b",
+      "category": "Military Bases",
+      "model": "models/pack-detail-monuments-desert-military-base-b-ac99a5c498ef-near.glb",
+      "triangles": 233881,
+      "bounds": [
+        [
+          -49.213451258395864,
+          -1.2969693617529998,
+          -51.455163200612496
+        ],
+        [
+          46.27819137133785,
+          7.012176847972796,
+          44.45379275740471
+        ]
+      ],
+      "terrain": "data/terrain/desert_military_base_b-63ccc423.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        1.0694
+      ],
+      "terrainSize": {
+        "x": 350.0,
+        "y": 60.0,
+        "z": 350.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "desert_military_base_c",
+      "key": "desert_military_base_c.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/military_bases/desert_military_base_c.prefab",
+      "name": "Abandoned Military Base · desert military base c",
+      "category": "Military Bases",
+      "model": "models/pack-detail-monuments-desert-military-base-c-7876b29e0f29-near.glb",
+      "triangles": 285384,
+      "bounds": [
+        [
+          -49.21236496101843,
+          -1.2933324958277623,
+          -80.77492297167359
+        ],
+        [
+          46.28648435697745,
+          7.012139574606067,
+          44.691749572753906
+        ]
+      ],
+      "terrain": "data/terrain/desert_military_base_c-0511b320.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        1.4814
+      ],
+      "terrainSize": {
+        "x": 350.0,
+        "y": 60.0,
+        "z": 350.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "desert_military_base_d",
+      "key": "desert_military_base_d.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/military_bases/desert_military_base_d.prefab",
+      "name": "Abandoned Military Base · desert military base d",
+      "category": "Military Bases",
+      "model": "models/pack-detail-monuments-desert-military-base-d-fb647a734c2f-near.glb",
+      "triangles": 312010,
+      "bounds": [
+        [
+          -67.21426884356251,
+          -1.317500241043824,
+          -45.60826549679037
+        ],
+        [
+          59.71427026336918,
+          7.015476791459832,
+          48.69962044054764
+        ]
+      ],
+      "terrain": "data/terrain/desert_military_base_d-7a43f373.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        0.7709
+      ],
+      "terrainSize": {
+        "x": 350.0,
+        "y": 60.0,
+        "z": 350.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "supermarket_1",
+      "key": "supermarket_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/roadside/supermarket_1.prefab",
+      "name": "Abandoned Supermarket",
+      "category": "Roadside",
+      "model": "models/pack-detail-monuments-supermarket-1-45d72f5b1210-near.glb",
+      "triangles": 113027,
+      "bounds": [
+        [
+          -20.006615149535037,
+          -1.3890227890014653,
+          -24.304210662841797
+        ],
+        [
+          23.92043806880838,
+          7.267571435979913,
+          23.381145477294922
+        ]
+      ],
+      "terrain": "data/terrain/supermarket_1-08071e69.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -3.0,
+        0.0031
+      ],
+      "terrainSize": {
+        "x": 250.0,
+        "y": 600.0,
+        "z": 250.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "airfield_1",
+      "key": "airfield_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/large/airfield_1.prefab",
+      "name": "Airfield",
+      "category": "Large",
+      "model": "models/pack-detail-monuments-airfield-1-a309b9cad61c-near.glb",
+      "triangles": 858162,
+      "bounds": [
+        [
+          -174.62844848632812,
+          -18.01501227896337,
+          -74.81247638672016
+        ],
+        [
+          173.79120635986328,
+          42.66155446350098,
+          124.39080738037251
+        ]
+      ],
+      "terrain": "data/terrain/airfield_1-ea5a7621.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        4.8892
+      ],
+      "terrainSize": {
+        "x": 512.0,
+        "y": 600.0,
+        "z": 512.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "arctic_research_base_a",
+      "key": "arctic_research_base_a.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/arctic_bases/arctic_research_base_a.prefab",
+      "name": "Arctic Research Base",
+      "category": "Arctic Bases",
+      "model": "models/pack-detail-monuments-arctic-research-base-a-5dfca0eca770-near.glb",
+      "triangles": 692117,
+      "bounds": [
+        [
+          -64.3706284126978,
+          -20.27924171503664,
+          -58.91407693146116
+        ],
+        [
+          59.801631927490234,
+          36.08771173211397,
+          57.88664772524142
+        ]
+      ],
+      "terrain": "data/terrain/arctic_research_base_a-1ce6a8bc.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        5.759
+      ],
+      "terrainSize": {
+        "x": 350.0,
+        "y": 60.0,
+        "z": 350.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "bandit_town",
+      "key": "bandit_town.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/medium/bandit_town.prefab",
+      "name": "Bandit Camp",
+      "category": "Medium",
+      "model": "models/pack-detail-monuments-bandit-town-6ddc692942e8-near.glb",
+      "triangles": 471760,
+      "bounds": [
+        [
+          -75.86044784706752,
+          -18.15832201088668,
+          -87.55603268478832
+        ],
+        [
+          80.36925965098456,
+          29.49807026820248,
+          85.00376030223956
+        ]
+      ],
+      "terrain": "data/terrain/bandit_town-7c51a725.json",
+      "hasNativeTerrain": true,
+      "terrainNote": "Prefab root absent from extracted scene",
+      "quality": "source-detail",
+      "isSafeZone": true,
+      "heightRange": [
+        0.0,
+        6.757
+      ],
+      "terrainSize": {
+        "x": 250.0,
+        "y": 600.0,
+        "z": 250.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ]
+    },
+    {
+      "id": "ferry_terminal_1",
+      "key": "ferry_terminal_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/harbor/ferry_terminal_1.prefab",
+      "name": "Ferry Terminal",
+      "category": "Harbor",
+      "model": "models/pack-detail-monuments-ferry-terminal-1-915616c640ca-near.glb",
+      "triangles": 566676,
+      "bounds": [
+        [
+          -125.2236501226917,
+          -21.80000734369871,
+          -126.90811233508444
+        ],
+        [
+          122.10544501630068,
+          27.757559631347657,
+          88.66748740675425
+        ]
+      ],
+      "terrain": "data/terrain/ferry_terminal_1-b5d2dbac.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -7.3233,
+        6.4969
+      ],
+      "terrainSize": {
+        "x": 512.0,
+        "y": 96.0,
+        "z": 512.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "fishing_village_b",
+      "key": "fishing_village_b.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_b.prefab",
+      "name": "Fishing Village A",
+      "category": "Fishing Village",
+      "model": "models/pack-detail-monuments-fishing-village-b-40949dc19f22-near.glb",
+      "triangles": 230469,
+      "bounds": [
+        [
+          -23.405616837576922,
+          -19.587515486948483,
+          -33.07727724984336
+        ],
+        [
+          17.007748450443447,
+          13.27314174960701,
+          41.65946062412249
+        ]
+      ],
+      "terrain": null,
+      "hasNativeTerrain": false,
+      "isSafeZone": true,
+      "terrainNote": "No enabled monument-owned heightmap; terrain depends on map placement.",
+      "quality": "source-detail"
+    },
+    {
+      "id": "fishing_village_c",
+      "key": "fishing_village_c.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_c.prefab",
+      "name": "Fishing Village B",
+      "category": "Fishing Village",
+      "model": "models/pack-detail-monuments-fishing-village-c-17b5733b665b-near.glb",
+      "triangles": 249263,
+      "bounds": [
+        [
+          -15.699732759340343,
+          -19.57460903959538,
+          -33.07683626434128
+        ],
+        [
+          14.539955074788645,
+          13.788526465168387,
+          41.65942145202486
+        ]
+      ],
+      "terrain": null,
+      "hasNativeTerrain": false,
+      "terrainNote": "No enabled monument-owned heightmap; terrain depends on map placement.",
+      "quality": "source-detail",
+      "isSafeZone": true
+    },
+    {
+      "id": "excavator_1",
+      "key": "excavator_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/large/excavator_1.prefab",
+      "name": "Giant Excavator Pit",
+      "category": "Large",
+      "model": "models/pack-detail-monuments-excavator-1-d19b8bfcbf10-near.glb",
+      "triangles": 669302,
+      "bounds": [
+        [
+          -109.26175077551198,
+          -6.86337832238188,
+          -98.77262999302665
+        ],
+        [
+          127.7526599948314,
+          67.89895868301392,
+          115.43069254565037
+        ]
+      ],
+      "terrain": "data/terrain/excavator_1-3caf7a9d.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -6.7474,
+        9.2043
+      ],
+      "terrainSize": {
+        "x": 500.0,
+        "y": 45.0,
+        "z": 500.0
+      },
+      "sourceResolution": [
+        2049,
+        2049
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "harbor_1",
+      "key": "harbor_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/harbor/harbor_1.prefab",
+      "name": "Harbor · harbor 1",
+      "category": "Harbor",
+      "model": "models/pack-detail-monuments-harbor-1-4ee55657d796-near.glb",
+      "triangles": 1078361,
+      "bounds": [
+        [
+          -136.07025545468176,
+          -35.22456058171376,
+          -171.10018946164584
+        ],
+        [
+          145.3895430104759,
+          39.290280116642585,
+          85.65340091553819
+        ]
+      ],
+      "terrain": "data/terrain/harbor_1-c76aadde.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -11.0001,
+        5.3889
+      ],
+      "terrainSize": {
+        "x": 500.0,
+        "y": 600.0,
+        "z": 500.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "harbor_2",
+      "key": "harbor_2.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/harbor/harbor_2.prefab",
+      "name": "Harbor · harbor 2",
+      "category": "Harbor",
+      "model": "models/pack-detail-monuments-harbor-2-2aefe5ba88ce-near.glb",
+      "triangles": 1147257,
+      "bounds": [
+        [
+          -111.74047948779884,
+          -14.625375720165216,
+          -144.59943057955005
+        ],
+        [
+          131.3891480324879,
+          38.99266742519711,
+          142.17918463899932
+        ]
+      ],
+      "terrain": "data/terrain/harbor_2-baf7f937.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -5.0,
+        4.5221
+      ],
+      "terrainSize": {
+        "x": 500.0,
+        "y": 600.0,
+        "z": 500.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "jungle_ruins_a",
+      "key": "jungle_ruins_a.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_a.prefab",
+      "name": "Jungle Ruin",
+      "category": "Jungle Ruins",
+      "model": "models/pack-detail-monuments-jungle-ruins-a-03075da52b70-near.glb",
+      "triangles": 113387,
+      "bounds": [
+        [
+          -12.678670718893537,
+          -2.6976045458306714,
+          -20.578234721946437
+        ],
+        [
+          11.621357094024859,
+          15.579997393725142,
+          19.436037063598633
+        ]
+      ],
+      "terrain": "data/terrain/jungle_ruins_a-cda5b8c9.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        1.0001
+      ],
+      "terrainSize": {
+        "x": 256.0,
+        "y": 256.0,
+        "z": 256.0
+      },
+      "sourceResolution": [
+        257,
+        257
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "jungle_ziggurat_a",
+      "key": "jungle_ziggurat_a.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ziggurat_a.prefab",
+      "name": "Jungle Ziggurat",
+      "category": "Jungle Ruins",
+      "model": "models/pack-detail-monuments-jungle-ziggurat-a-04d5767201f7-near.glb",
+      "triangles": 334861,
+      "bounds": [
+        [
+          -27.650246136121496,
+          -6.140782028921279,
+          -25.047929643676355
+        ],
+        [
+          27.6489200592041,
+          29.9172053306741,
+          22.935561640104424
+        ]
+      ],
+      "terrain": "data/terrain/jungle_ziggurat_a-6c19d013.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -6.0,
+        0.2973
+      ],
+      "terrainSize": {
+        "x": 256.0,
+        "y": 256.0,
+        "z": 256.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "jungle_ruins_b",
+      "key": "jungle_ruins_b.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_b.prefab",
+      "name": "Jungle ruin · jungle ruins b",
+      "category": "Jungle Ruins",
+      "model": "models/pack-detail-monuments-jungle-ruins-b-ff9508e8886c-near.glb",
+      "triangles": 136730,
+      "bounds": [
+        [
+          -12.52192848522356,
+          0.031305227022029314,
+          -18.344707206726074
+        ],
+        [
+          15.693037340554309,
+          24.181330324812073,
+          16.22381591155682
+        ]
+      ],
+      "terrain": "data/terrain/jungle_ruins_b-fa969169.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        1.5001
+      ],
+      "terrainSize": {
+        "x": 256.0,
+        "y": 256.0,
+        "z": 256.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "jungle_ruins_c",
+      "key": "jungle_ruins_c.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_c.prefab",
+      "name": "Jungle ruin · jungle ruins c",
+      "category": "Jungle Ruins",
+      "model": "models/pack-detail-monuments-jungle-ruins-c-5b0bb3beeee1-near.glb",
+      "triangles": 131169,
+      "bounds": [
+        [
+          -10.995002875523426,
+          -1.8190103387888321,
+          -11.098847067756266
+        ],
+        [
+          10.754998841638827,
+          18.455215852981517,
+          11.473553663253783
+        ]
+      ],
+      "terrain": "data/terrain/jungle_ruins_c-e3afdf17.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0001,
+        0.0001
+      ],
+      "terrainSize": {
+        "x": 256.0,
+        "y": 256.0,
+        "z": 256.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "jungle_ruins_d",
+      "key": "jungle_ruins_d.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_d.prefab",
+      "name": "Jungle ruin · jungle ruins d",
+      "category": "Jungle Ruins",
+      "model": "models/pack-detail-monuments-jungle-ruins-d-411b474c1b85-near.glb",
+      "triangles": 95526,
+      "bounds": [
+        [
+          -12.603358589782381,
+          -2.6903615798560088,
+          -12.5291754609605
+        ],
+        [
+          8.578725814692383,
+          22.00709113835144,
+          9.964912968047551
+        ]
+      ],
+      "terrain": "data/terrain/jungle_ruins_d-6e6e4ef6.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -1.5,
+        0.0001
+      ],
+      "terrainSize": {
+        "x": 256.0,
+        "y": 256.0,
+        "z": 256.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "jungle_ruins_e",
+      "key": "jungle_ruins_e.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/jungle_ruins/jungle_ruins_e.prefab",
+      "name": "Jungle ruin · jungle ruins e",
+      "category": "Jungle Ruins",
+      "model": "models/pack-detail-monuments-jungle-ruins-e-4822070323b7-near.glb",
+      "triangles": 176348,
+      "bounds": [
+        [
+          -14.189245563622485,
+          -6.231241584565396,
+          -16.98356108668913
+        ],
+        [
+          13.958447774318644,
+          20.733309720928805,
+          15.755468263053615
+        ]
+      ],
+      "terrain": "data/terrain/jungle_ruins_e-2eb2b731.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -1.5,
+        0.0001
+      ],
+      "terrainSize": {
+        "x": 256.0,
+        "y": 256.0,
+        "z": 256.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "junkyard_1",
+      "key": "junkyard_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/medium/junkyard_1.prefab",
+      "name": "Junkyard",
+      "category": "Medium",
+      "model": "models/pack-detail-monuments-junkyard-1-cd73e278f243-near.glb",
+      "triangles": 493425,
+      "bounds": [
+        [
+          -119.38047056328938,
+          -7.123172797995625,
+          -89.98975203717416
+        ],
+        [
+          79.95342649854022,
+          30.6635835269021,
+          76.07828087852921
+        ]
+      ],
+      "terrain": "data/terrain/junkyard_1-0d9107f2.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -0.7007,
+        14.3488
+      ],
+      "terrainSize": {
+        "x": 500.0,
+        "y": 90.0,
+        "z": 500.0
+      },
+      "sourceResolution": [
+        1025,
+        1025
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "stables_b",
+      "key": "stables_b.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/small/stables_b.prefab",
+      "name": "Large Barn",
+      "category": "Small",
+      "model": "models/pack-detail-monuments-stables-b-7735a02538bc-near.glb",
+      "triangles": 138266,
+      "bounds": [
+        [
+          -32.70459955940608,
+          2.585934481259386,
+          -34.52112591500101
+        ],
+        [
+          39.10458786526776,
+          19.574128946972678,
+          19.639577985885506
+        ]
+      ],
+      "terrain": "data/terrain/stables_b-15c1729b.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": true,
+      "heightRange": [
+        3.0,
+        3.4395
+      ],
+      "terrainSize": {
+        "x": 250.0,
+        "y": 600.0,
+        "z": 250.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "fishing_village_a",
+      "key": "fishing_village_a.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/fishing_village/fishing_village_a.prefab",
+      "name": "Large Fishing Village",
+      "category": "Fishing Village",
+      "model": "models/pack-detail-monuments-fishing-village-a-941e67d96f55-near.glb",
+      "triangles": 334273,
+      "bounds": [
+        [
+          -40.83936072337878,
+          -19.72354246932486,
+          -28.148082747616442
+        ],
+        [
+          34.45256054405923,
+          15.152682798793514,
+          49.534321377329334
+        ]
+      ],
+      "terrain": null,
+      "hasNativeTerrain": false,
+      "isSafeZone": true,
+      "terrainNote": "No enabled monument-owned heightmap; terrain depends on map placement.",
+      "quality": "source-detail"
+    },
+    {
+      "id": "launch_site_1",
+      "key": "launch_site_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/xlarge/launch_site_1.prefab",
+      "name": "Launch Site",
+      "category": "Xlarge",
+      "model": "models/pack-detail-monuments-launch-site-1-fbcf0d0472f7-near.glb",
+      "triangles": 1797769,
+      "bounds": [
+        [
+          -263.4382672171656,
+          -34.79475635936522,
+          -127.00840896832574
+        ],
+        [
+          300.9649658203125,
+          75.0060692375398,
+          164.66254802216963
+        ]
+      ],
+      "terrain": "data/terrain/launch_site_1-462e32de.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -34.7365,
+        8.3325
+      ],
+      "terrainSize": {
+        "x": 800.0,
+        "y": 600.0,
+        "z": 800.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "lighthouse",
+      "key": "lighthouse.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/lighthouse/lighthouse.prefab",
+      "name": "Lighthouse",
+      "category": "Lighthouse",
+      "model": "models/pack-detail-monuments-lighthouse-67b2a3c9fd39-near.glb",
+      "triangles": 95580,
+      "bounds": [
+        [
+          -28.225991891503753,
+          -31.39890966331233,
+          -41.74604473077401
+        ],
+        [
+          45.26729692157852,
+          65.55467224121094,
+          35.712702196171506
+        ]
+      ],
+      "terrain": null,
+      "hasNativeTerrain": false,
+      "isSafeZone": false,
+      "terrainNote": "No enabled monument-owned heightmap; terrain depends on map placement.",
+      "quality": "source-detail"
+    },
+    {
+      "id": "military_tunnel_1",
+      "key": "military_tunnel_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/large/military_tunnel_1.prefab",
+      "name": "Military Tunnel",
+      "category": "Large",
+      "model": "models/pack-detail-monuments-military-tunnel-1-8d9aff12ceb3-near.glb",
+      "triangles": 994438,
+      "bounds": [
+        [
+          -137.6761474609375,
+          26.7069468058354,
+          -127.30713653564453
+        ],
+        [
+          138.0174789428711,
+          92.12879456470618,
+          147.4312183803495
+        ]
+      ],
+      "terrain": "data/terrain/military_tunnel_1-e6d016da.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        42.8859,
+        82.4757
+      ],
+      "terrainSize": {
+        "x": 500.0,
+        "y": 600.0,
+        "z": 500.0
+      },
+      "sourceResolution": [
+        1025,
+        1025
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "warehouse",
+      "key": "warehouse.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/roadside/warehouse.prefab",
+      "name": "Mining Outpost",
+      "category": "Roadside",
+      "model": "models/pack-detail-monuments-warehouse-8eba3be1cd65-near.glb",
+      "triangles": 49109,
+      "bounds": [
+        [
+          -23.382338381150618,
+          -2.2130128468594688,
+          -4.89065239304041
+        ],
+        [
+          21.71521562831593,
+          8.967781651431315,
+          19.929634574257577
+        ]
+      ],
+      "terrain": "data/terrain/warehouse-9e4b1f63.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        3.2351
+      ],
+      "terrainSize": {
+        "x": 128.0,
+        "y": 1000.0,
+        "z": 128.0
+      },
+      "sourceResolution": [
+        65,
+        65
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "nuclear_missile_silo",
+      "key": "nuclear_missile_silo.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/medium/nuclear_missile_silo.prefab",
+      "name": "Missile Silo",
+      "category": "Medium",
+      "model": "models/pack-detail-monuments-nuclear-missile-silo-53b69433bd60-near.glb",
+      "triangles": 835538,
+      "bounds": [
+        [
+          -51.04996842848104,
+          9.498226794517677,
+          -63.30855987587926
+        ],
+        [
+          81.25000162290604,
+          107.94318783483484,
+          65.09402320616223
+        ]
+      ],
+      "terrain": "data/terrain/nuclear_missile_silo-75e0c444.json",
+      "hasNativeTerrain": true,
+      "terrainNote": "Prefab root absent from extracted scene",
+      "quality": "source-detail",
+      "isSafeZone": false,
+      "heightRange": [
+        7.3704,
+        49.9832
+      ],
+      "terrainSize": {
+        "x": 256.0,
+        "y": 250.0,
+        "z": 256.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ]
+    },
+    {
+      "id": "compound",
+      "key": "compound.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/medium/compound.prefab",
+      "name": "Outpost",
+      "category": "Medium",
+      "model": "models/pack-detail-monuments-compound-cee69d4bd8f6-near.glb",
+      "triangles": 662631,
+      "bounds": [
+        [
+          -81.46914938143527,
+          -11.919109895200664,
+          -98.93630636946497
+        ],
+        [
+          83.99715919978826,
+          29.87860250407695,
+          93.9091848224431
+        ]
+      ],
+      "terrain": "data/terrain/compound-39c261f7.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": true,
+      "heightRange": [
+        0.0,
+        1.5001
+      ],
+      "terrainSize": {
+        "x": 350.0,
+        "y": 64.0,
+        "z": 350.0
+      },
+      "sourceResolution": [
+        257,
+        257
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "gas_station_1",
+      "key": "gas_station_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/roadside/gas_station_1.prefab",
+      "name": "Oxum’s Gas Station",
+      "category": "Roadside",
+      "model": "models/pack-detail-monuments-gas-station-1-7b716ce1a956-near.glb",
+      "triangles": 146349,
+      "bounds": [
+        [
+          -34.672601400529324,
+          -7.499858554711989,
+          -45.12603932030281
+        ],
+        [
+          35.586746115549495,
+          21.50471717581027,
+          14.618098034459008
+        ]
+      ],
+      "terrain": "data/terrain/gas_station_1-efb5c2f3.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        3.0031
+      ],
+      "terrainSize": {
+        "x": 250.0,
+        "y": 600.0,
+        "z": 250.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "powerplant_1",
+      "key": "powerplant_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/large/powerplant_1.prefab",
+      "name": "Power Plant",
+      "category": "Large",
+      "model": "models/pack-detail-monuments-powerplant-1-b3b553295348-near.glb",
+      "triangles": 1077237,
+      "bounds": [
+        [
+          -125.86437946382378,
+          -6.920963820820411,
+          -132.44525524166622
+        ],
+        [
+          98.12082019903626,
+          55.30423387819737,
+          146.20310021118695
+        ]
+      ],
+      "terrain": "data/terrain/powerplant_1-bb398283.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        6.2809
+      ],
+      "terrainSize": {
+        "x": 500.0,
+        "y": 600.0,
+        "z": 500.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "apartments_complex_1",
+      "key": "apartments_complex_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/medium/apartments_complex_1.prefab",
+      "name": "Radtown · apartments complex 1",
+      "category": "Medium",
+      "model": "models/pack-detail-monuments-apartments-complex-1-14557863d79b-near.glb",
+      "triangles": 3390424,
+      "bounds": [
+        [
+          -118.72994230139078,
+          -7.0795857736645225,
+          -120.66377726390988
+        ],
+        [
+          57.33290811083982,
+          35.783455911069424,
+          78.83983945082338
+        ]
+      ],
+      "terrain": "data/terrain/apartments_complex_1-0ede25ec.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        1.2452
+      ],
+      "terrainSize": {
+        "x": 1000.0,
+        "y": 600.0,
+        "z": 1000.0
+      },
+      "sourceResolution": [
+        1025,
+        1025
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "radtown_1",
+      "key": "radtown_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/roadside/radtown_1.prefab",
+      "name": "Radtown · radtown 1",
+      "category": "Roadside",
+      "model": "models/pack-detail-monuments-radtown-1-219070d176f5-near.glb",
+      "triangles": 716515,
+      "bounds": [
+        [
+          -55.87577171868642,
+          -2.7602959846624597,
+          -47.09578684000155
+        ],
+        [
+          61.499229648085034,
+          12.815478879309678,
+          37.70635394144109
+        ]
+      ],
+      "terrain": "data/terrain/radtown_1-fba338f7.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        0.7142
+      ],
+      "terrainSize": {
+        "x": 250.0,
+        "y": 600.0,
+        "z": 250.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "stables_a",
+      "key": "stables_a.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/small/stables_a.prefab",
+      "name": "Ranch",
+      "category": "Small",
+      "model": "models/pack-detail-monuments-stables-a-61f48b53fb5c-near.glb",
+      "triangles": 101855,
+      "bounds": [
+        [
+          -24.628347317520763,
+          2.661297582605714,
+          -33.44583805383717
+        ],
+        [
+          25.640808867242065,
+          16.21813539921548,
+          24.88113749405991
+        ]
+      ],
+      "terrain": "data/terrain/stables_a-0f2984eb.json",
+      "hasNativeTerrain": true,
+      "terrainNote": "Prefab root absent from extracted scene",
+      "quality": "source-detail",
+      "isSafeZone": true,
+      "heightRange": [
+        2.8932,
+        3.6257
+      ],
+      "terrainSize": {
+        "x": 250.0,
+        "y": 600.0,
+        "z": 250.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ]
+    },
+    {
+      "id": "satellite_dish",
+      "key": "satellite_dish.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/small/satellite_dish.prefab",
+      "name": "Satellite Dish",
+      "category": "Small",
+      "model": "models/pack-detail-monuments-satellite-dish-9c95b8db3bff-near.glb",
+      "triangles": 174195,
+      "bounds": [
+        [
+          -83.5545490773861,
+          -3.2177490550955348,
+          -71.80219396579287
+        ],
+        [
+          80.00022497318699,
+          41.902666231329476,
+          64.03443273532412
+        ]
+      ],
+      "terrain": "data/terrain/satellite_dish-365e0972.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        4.5169
+      ],
+      "terrainSize": {
+        "x": 256.0,
+        "y": 1000.0,
+        "z": 256.0
+      },
+      "sourceResolution": [
+        1025,
+        1025
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "radtown_small_3",
+      "key": "radtown_small_3.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/medium/radtown_small_3.prefab",
+      "name": "Sewer Branch",
+      "category": "Medium",
+      "model": "models/pack-detail-monuments-radtown-small-3-ea309734f281-near.glb",
+      "triangles": 298980,
+      "bounds": [
+        [
+          -82.41878509521484,
+          -16.693284950429014,
+          -55.080521845813564
+        ],
+        [
+          82.32250570431341,
+          32.3372035902174,
+          89.72229074632338
+        ]
+      ],
+      "terrain": "data/terrain/radtown_small_3-13c2d24e.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -3.0,
+        20.9333
+      ],
+      "terrainSize": {
+        "x": 500.0,
+        "y": 600.0,
+        "z": 500.0
+      },
+      "sourceResolution": [
+        1025,
+        1025
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "sphere_tank",
+      "key": "sphere_tank.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/small/sphere_tank.prefab",
+      "name": "The Dome",
+      "category": "Small",
+      "model": "models/pack-detail-monuments-sphere-tank-cc4482e491ec-near.glb",
+      "triangles": 233808,
+      "bounds": [
+        [
+          -52.56555827215886,
+          -1.856416255188181,
+          -73.39065735924908
+        ],
+        [
+          55.02757138476161,
+          77.7411791379349,
+          45.014034568115235
+        ]
+      ],
+      "terrain": "data/terrain/sphere_tank-ac2f1ca7.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        7.9351
+      ],
+      "terrainSize": {
+        "x": 256.0,
+        "y": 1000.0,
+        "z": 256.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "trainyard_1",
+      "key": "trainyard_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/large/trainyard_1.prefab",
+      "name": "Train Yard",
+      "category": "Large",
+      "model": "models/pack-detail-monuments-trainyard-1-217be822e977-near.glb",
+      "triangles": 988176,
+      "bounds": [
+        [
+          -117.36031871933062,
+          -22.505362265281313,
+          -115.77011575922766
+        ],
+        [
+          133.4155340891923,
+          45.55904834308378,
+          114.07026105507977
+        ]
+      ],
+      "terrain": "data/terrain/trainyard_1-f3e2a80b.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -6.0,
+        9.2536
+      ],
+      "terrainSize": {
+        "x": 500.0,
+        "y": 600.0,
+        "z": 500.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "water_treatment_plant_1",
+      "key": "water_treatment_plant_1.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/large/water_treatment_plant_1.prefab",
+      "name": "Water Treatment Plant",
+      "category": "Large",
+      "model": "models/pack-detail-monuments-water-treatment-plant-1-00354bf7625f-near.glb",
+      "triangles": 833744,
+      "bounds": [
+        [
+          -138.4940135881675,
+          -32.38866244768066,
+          -130.36622178666698
+        ],
+        [
+          130.2932518217632,
+          66.81179449039695,
+          181.5387866310739
+        ]
+      ],
+      "terrain": "data/terrain/water_treatment_plant_1-2022f286.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        -8.4507,
+        31.1575
+      ],
+      "terrainSize": {
+        "x": 500.0,
+        "y": 600.0,
+        "z": 500.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "water_well_a",
+      "key": "water_well_a.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/tiny/water_well_a.prefab",
+      "name": "Water Well · water well a",
+      "category": "Tiny",
+      "model": "models/pack-detail-monuments-water-well-a-bf46f00099d7-near.glb",
+      "triangles": 38687,
+      "bounds": [
+        [
+          -13.002916531013053,
+          -1.4996790556782287,
+          -10.982341533154006
+        ],
+        [
+          10.906870091494438,
+          12.844711805515075,
+          13.018953163146973
+        ]
+      ],
+      "terrain": "data/terrain/water_well_a-fa69f45b.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        0.5235
+      ],
+      "terrainSize": {
+        "x": 64.0,
+        "y": 64.0,
+        "z": 64.0
+      },
+      "sourceResolution": [
+        129,
+        129
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "water_well_b",
+      "key": "water_well_b.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/tiny/water_well_b.prefab",
+      "name": "Water Well · water well b",
+      "category": "Tiny",
+      "model": "models/pack-detail-monuments-water-well-b-cbcfc9a39d63-near.glb",
+      "triangles": 52267,
+      "bounds": [
+        [
+          -12.68983517966849,
+          -2.4587733104045117,
+          -11.649499051999904
+        ],
+        [
+          13.037229001419636,
+          10.886917355307355,
+          13.234811277009408
+        ]
+      ],
+      "terrain": "data/terrain/water_well_b-8e0e594e.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        1.1298
+      ],
+      "terrainSize": {
+        "x": 64.0,
+        "y": 60.0,
+        "z": 64.0
+      },
+      "sourceResolution": [
+        129,
+        129
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "water_well_c",
+      "key": "water_well_c.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/tiny/water_well_c.prefab",
+      "name": "Water Well · water well c",
+      "category": "Tiny",
+      "model": "models/pack-detail-monuments-water-well-c-d5533ed62362-near.glb",
+      "triangles": 49150,
+      "bounds": [
+        [
+          -11.595898607529772,
+          -0.9999135457693225,
+          -10.715782756574276
+        ],
+        [
+          10.658594893664048,
+          15.871284575882237,
+          9.435174492812125
+        ]
+      ],
+      "terrain": "data/terrain/water_well_c-e456a828.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        1.7423
+      ],
+      "terrainSize": {
+        "x": 64.0,
+        "y": 64.0,
+        "z": 64.0
+      },
+      "sourceResolution": [
+        257,
+        257
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "water_well_d",
+      "key": "water_well_d.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/tiny/water_well_d.prefab",
+      "name": "Water Well · water well d",
+      "category": "Tiny",
+      "model": "models/pack-detail-monuments-water-well-d-f9b51ed250e5-near.glb",
+      "triangles": 44378,
+      "bounds": [
+        [
+          -12.06838463728711,
+          -6.21492877127606,
+          -10.561533638022283
+        ],
+        [
+          12.268629777894054,
+          13.920797783714315,
+          12.005789949695643
+        ]
+      ],
+      "terrain": "data/terrain/water_well_d-a80a3f74.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        1.9005
+      ],
+      "terrainSize": {
+        "x": 64.0,
+        "y": 64.0,
+        "z": 64.0
+      },
+      "sourceResolution": [
+        257,
+        257
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "water_well_e",
+      "key": "water_well_e.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/tiny/water_well_e.prefab",
+      "name": "Water Well · water well e",
+      "category": "Tiny",
+      "model": "models/pack-detail-monuments-water-well-e-da3aec91a06a-near.glb",
+      "triangles": 35113,
+      "bounds": [
+        [
+          -9.762117729506453,
+          -1.8639056581756588,
+          -6.650868461195885
+        ],
+        [
+          8.100938388615592,
+          14.88989735657959,
+          6.203073692365053
+        ]
+      ],
+      "terrain": "data/terrain/water_well_e-ff8658c7.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        1.7345
+      ],
+      "terrainSize": {
+        "x": 64.0,
+        "y": 64.0,
+        "z": 64.0
+      },
+      "sourceResolution": [
+        129,
+        129
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "watertreatment_pipe_access_point",
+      "key": "watertreatment_pipe_access_point.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/maintainables/watertreatment_pipe_access_point.prefab",
+      "name": "Watertreatment Pipe Access Point",
+      "category": "Maintainables",
+      "model": "models/watertreatment-pipe-access-point-6e3b8f8c-near-textured-map-near.glb",
+      "triangles": 13851,
+      "bounds": [
+        [
+          -4.588649749755859,
+          -1.1138816966532614,
+          -5.624808263332747
+        ],
+        [
+          4.71235466003418,
+          1.1813283496265505,
+          5.6967125423760026
+        ]
+      ],
+      "terrain": null,
+      "hasNativeTerrain": false,
+      "isSafeZone": false,
+      "terrainNote": "No enabled monument-owned heightmap; terrain depends on map placement.",
+      "quality": "source-detail"
+    },
+    {
+      "id": "swamp_a",
+      "key": "swamp_a.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/swamp/swamp_a.prefab",
+      "name": "Wild Swamp · swamp a",
+      "category": "Swamp",
+      "model": "models/pack-detail-monuments-swamp-a-a0aefc8fd81a-near.glb",
+      "triangles": 87764,
+      "bounds": [
+        [
+          -81.16781083220337,
+          -3.61883889599721,
+          -83.81372462439666
+        ],
+        [
+          66.05295792692993,
+          24.19634297698817,
+          77.72338856530061
+        ]
+      ],
+      "terrain": "data/terrain/swamp_a-6202ea0a.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        4.3216
+      ],
+      "terrainSize": {
+        "x": 250.0,
+        "y": 600.0,
+        "z": 250.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    },
+    {
+      "id": "swamp_b",
+      "key": "swamp_b.prefab",
+      "prefab": "assets/bundled/prefabs/autospawn/monument/swamp/swamp_b.prefab",
+      "name": "Wild Swamp · swamp b",
+      "category": "Swamp",
+      "model": "models/pack-detail-monuments-swamp-b-db9a223e6e75-near.glb",
+      "triangles": 35208,
+      "bounds": [
+        [
+          -55.791736580322265,
+          -2.2200027597223846,
+          -46.11292865198202
+        ],
+        [
+          52.25546648364258,
+          29.456522959408566,
+          54.65352458274374
+        ]
+      ],
+      "terrain": "data/terrain/swamp_b-f7657f2d.json",
+      "hasNativeTerrain": true,
+      "isSafeZone": false,
+      "heightRange": [
+        0.0,
+        3.2778
+      ],
+      "terrainSize": {
+        "x": 200.0,
+        "y": 600.0,
+        "z": 200.0
+      },
+      "sourceResolution": [
+        513,
+        513
+      ],
+      "quality": "source-detail"
+    }
+  ]
+}

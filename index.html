@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trucker · Zone Workshop</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="roadmark" aria-hidden="true">╱╱</span><div><strong>TRUCKER</strong><span>ZONE WORKSHOP</span></div></div>
+    <div class="project-state"><span class="live-dot"></span><span id="save-state">Local workspace</span></div>
+    <div class="header-actions"><button id="help" class="quiet">Guide <kbd>?</kbd></button><button id="import-config">Import config</button><button id="export-config" class="primary">Export config <span>↗</span></button></div>
+  </header>
+  <main>
+    <aside class="library">
+      <div class="panel-title"><span>MONUMENT LIBRARY</span><span id="monument-count">48</span></div>
+      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a monument…" aria-label="Search monuments"><kbd>/</kbd></label>
+      <select id="category" aria-label="Monument category"><option value="">All locations</option></select>
+      <div class="count-key"><span class="count-spawns">● Trailer spawns</span><span class="count-deliveries">● Delivery zones</span></div>
+      <div id="monument-list" role="listbox" aria-label="Monuments"></div>
+      <div class="library-foot"><span class="dot small"></span>REAL PREFABS · LOCAL ASSETS<br><small>Metres. Original monument pivots.</small></div>
+    </aside>
+    <section class="workspace" aria-label="3D monument editor">
+      <div class="viewport-heading"><div><span class="eyebrow" id="monument-category">ROADSIDE</span><h1 id="monument-title">Loading workshop…</h1></div><button id="frame-monument" class="quiet" title="Frame monument (Home)">Fit monument <kbd>Home</kbd></button></div>
+      <div id="viewport"><div id="loading" class="loading"><span class="spinner"></span><strong>Opening monument</strong><span>Loading local geometry…</span></div></div>
+      <div class="tools" role="toolbar" aria-label="Editing tools"><button id="tool-move" class="active" title="Move tool (1)">↔ <span>Move</span><kbd>1</kbd></button><button id="tool-rotate" title="Rotate tool (2)">⟳ <span>Rotate</span><kbd>2</kbd></button><span class="tool-divider"></span><button id="tool-place" title="Place on clicked surface (P)">⌖ <span>Place</span><kbd>P</kbd></button><label title="Movement and rotation snapping"><input type="checkbox" id="snap-enabled" checked> Snap</label><select id="snap-step" aria-label="Move snap step"><option value="0.1">0.1 m</option><option value="0.25" selected>0.25 m</option><option value="0.5">0.5 m</option><option value="1">1 m</option></select><span class="tool-divider"></span><button id="undo" class="icon-button" title="Undo (Ctrl+Z)" aria-label="Undo">↶</button><button id="redo" class="icon-button" title="Redo (Ctrl+Y)" aria-label="Redo">↷</button></div>
+      <div class="fly-settings"><label>Fly speed <input id="fly-speed" type="number" min="0.1" max="150" step="1" value="8" aria-label="Fly speed in metres per second"> m/s</label><span>Shift ×4</span></div><div class="view-options"><button id="view-fly" class="active">Fly</button><button id="view-perspective">Orbit</button><button id="view-top">Top</button><button id="frame-selection" title="Frame selected point (F)">Focus <kbd>F</kbd></button></div>
+      <div class="viewport-legend"><span><i class="legend-dot delivery"></i>Delivery zone</span><span><i class="legend-dot spawn"></i>Trailer spawn</span><span><i class="legend-dot loot"></i>Loot spawn area</span><label><input type="checkbox" id="show-grid" checked> Grid</label><label><input type="checkbox" id="show-terrain" checked> Terrain</label></div>
+      <div class="viewport-bottom"><span id="placement-hint">Mouse drag look · WASD fly · Q/E down/up · Shift faster</span><span id="cursor-coordinates">LOCAL METRES</span></div>
+      <div class="scene-meta"><span id="geometry-info">—</span><span id="terrain-info">Terrain template</span></div>
+    </section>
+    <aside class="inspector">
+      <div class="tabs"><button id="tab-spawns" class="active">Spawn points <span id="spawn-count">0</span></button><button id="tab-deliveries">Deliveries <span id="delivery-count">0</span></button></div>
+      <div class="point-heading"><span id="point-list-title">TRAILER SPAWNS</span><button id="add-point" class="text-button">+ Add point</button></div>
+      <div id="point-list"></div>
+      <div id="inspector-empty" class="empty"><span>⌖</span><strong>Make room for a delivery.</strong><p>Add a point, then click Place to position it on the monument.</p></div>
+      <section id="point-inspector" hidden>
+        <div class="section-head"><strong id="selected-title">Spawn 01</strong><div><button id="duplicate-point" class="icon-button" title="Duplicate point" aria-label="Duplicate point">⧉</button><button id="delete-point" class="icon-button danger" title="Delete point (Delete)" aria-label="Delete point">×</button></div></div>
+        <div class="field-heading">LOCAL POSITION <small>metres</small></div>
+        <div class="vector-inputs"><label class="axis-x">X<input id="pos-x" type="number" step="0.1"></label><label class="axis-y">Y<input id="pos-y" type="number" step="0.1"></label><label class="axis-z">Z<input id="pos-z" type="number" step="0.1"></label></div>
+        <div id="rotation-fields"><div class="field-heading">ROTATION <small>degrees</small></div><div class="vector-inputs"><label class="axis-x">X<input id="rot-x" type="number" step="1"></label><label class="axis-y">Y<input id="rot-y" type="number" step="1"></label><label class="axis-z">Z<input id="rot-z" type="number" step="1"></label></div></div>
+        <div id="radius-fields" hidden><div class="field-heading">SPHERE RADIUS <small>metres</small></div><div class="radius-input"><input id="radius-slider" type="range" min="0.1" max="60" step="0.1" aria-label="Delivery sphere radius"><input id="radius" type="number" min="0.1" max="1000" step="0.1"></div><div id="sphere-size" class="subtle">Diameter 20 m</div></div>
+        <button id="drop-surface" class="full-button">↓ Set on surface</button>
+      </section>
+      <section id="preview-section">
+        <div class="section-head"><strong>Trailer fit</strong><span class="tiny-tag">PREVIEW</span></div>
+        <label class="select-label">Model<select id="preview-model"><option value="semi">Semi trailer · green</option><option value="euro">Euro trailer · black</option><option value="both">Compare both</option></select></label>
+        <div class="check-row"><label><input id="show-bounds" type="checkbox"> Config envelope</label><label><input id="show-colliders" type="checkbox"> Collision boxes</label></div>
+        <div id="trailer-dimensions" class="dimension-strip">—</div>
+        
+        <p class="fine-print">All spawns and delivery zones stay visible. Optional envelopes show configured bounds for the selected spawn; they are not a collision test.</p>
+      </section>
+      <section class="loot-panel"><div class="section-head"><strong>Barrel &amp; crate spawns</strong><label><input id="show-loot" type="checkbox" checked> Show</label></div><p id="loot-source" class="subtle">Checking source data…</p><div id="loot-conflicts" class="loot-status"></div><p class="fine-print">Blue areas show the monument’s possible barrel and crate spawn locations. All possible choices are included. Outlines include a clearance margin; a point may be empty until loot respawns.</p></section>
+      <section class="monument-settings"><details><summary>Monument settings</summary><label class="check-row"><input type="checkbox" id="monument-enabled"> Enabled in config</label><label class="select-label">Display name<input type="text" id="display-name" placeholder="Monument name"></label><label class="select-label">Allowed delivery types<input type="text" id="allowed-types" placeholder="All types, or comma-separated keys"></label><button id="copy-json" class="full-button">View monument JSON</button></details></section>
+      <div class="inspector-foot"><span id="config-name">TruckerEvent.json</span><span id="config-count">—</span></div>
+    </aside>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="file-input" accept=".json,application/json" hidden>
+  <dialog id="guide-dialog"><button class="dialog-close" aria-label="Close">×</button><span class="eyebrow">QUICK START</span><h2>A better place to park.</h2><ol><li>Choose a monument on the left.</li><li>Add a spawn point or delivery zone.</li><li>Click <b>Place</b>, then click a surface. Drag the arrows for precise adjustments.</li><li>All spawn previews and delivery spheres remain visible. Select one to edit it; optional envelopes display its configured bounds.</li><li>Export the configuration when you’re ready.</li></ol><p>Drag with the left mouse button on empty space to look around, or hold the right mouse button for mouse look. Use WASD to fly, Q/E or Ctrl/Space to move down/up, and Shift to move faster. While looking, the wheel adjusts fly speed. Escape releases the mouse. Orbit controls are available using the Orbit button.</p><p>Coordinates are local to the original Rust monument pivot. The editor handles the game’s axis and rotation conversion for you.</p><div class="shortcut-grid"><span>Move <kbd>1</kbd></span><span>Rotate <kbd>2</kbd></span><span>Place <kbd>P</kbd></span><span>Focus <kbd>F</kbd></span><span>Undo <kbd>Ctrl Z</kbd></span><span>Duplicate <kbd>Ctrl D</kbd></span></div><p class="fine-print">Progress saves in this browser automatically. Export a JSON file for a durable backup. The starting configuration is a local snapshot; use Import config for your latest file.</p><button class="primary dialog-done">Start editing</button></dialog>
+  <dialog id="json-dialog"><button class="dialog-close" aria-label="Close">×</button><span class="eyebrow">CONFIGURATION</span><h2 id="json-title">Monument JSON</h2><pre id="json-preview"></pre><div class="dialog-actions"><button id="copy-json-text">Copy JSON</button><button id="export-monument" class="primary">Export monument</button></div></dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

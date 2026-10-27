@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Trailer preview verification</title><style>body{margin:0;background:#272e32;color:#e9eee7;font:16px system-ui}canvas{display:block}header{position:absolute;top:22px;left:28px}small{color:#bcc9b7}</style><script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script></head><body><header><strong>Trailer previews</strong><br><small>Custom models · original trailer origins · two and three axles</small></header><script type="module">
+import * as T from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+const r=new T.WebGLRenderer({antialias:true});r.setSize(innerWidth,innerHeight);r.setPixelRatio(1);r.toneMapping=T.ACESFilmicToneMapping;r.toneMappingExposure=1.2;document.body.append(r.domElement);
+const s=new T.Scene();s.background=new T.Color(0x353e43);s.add(new T.HemisphereLight(0xffffff,0x73756a,2));const l=new T.DirectionalLight(0xffffff,2.3);l.position.set(5,15,8);s.add(l);
+const cam=new T.PerspectiveCamera(40,innerWidth/innerHeight,.1,400);cam.position.set(21,11,23);const orbit=new OrbitControls(cam,r.domElement);orbit.target.set(0,2,-2);orbit.update();
+const loader=new GLTFLoader();const models=await Promise.all(['semi','euro'].map(id=>loader.loadAsync('models/trailer-'+id+'.glb?v=mask-tyres')));
+models[0].scene.position.set(-6,.52,0);models[1].scene.position.set(6,1.18,3);for(const m of models)s.add(m.scene);
+const floor=new T.Mesh(new T.PlaneGeometry(140,140),new T.MeshLambertMaterial({color:0x707a72}));floor.rotation.x=-Math.PI/2;floor.position.y=-.05;s.add(floor);s.add(new T.GridHelper(100,100,0x929c91,0x7b857b));
+function draw(){requestAnimationFrame(draw);r.render(s,cam)}draw();document.title='Trailer previews ready';
+</script></body></html>

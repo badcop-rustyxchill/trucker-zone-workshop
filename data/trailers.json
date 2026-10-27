@@ -1,0 +1,350 @@
+[
+  {
+    "id": "semi",
+    "name": "Semi trailer \u00b7 Green",
+    "file": "models/trailer-semi.glb",
+    "model": "models/trailer-semi.glb",
+    "sourceFile": "SemiTrailer_Green.json",
+    "bounds": {
+      "Center": {
+        "x": 0.12,
+        "y": 2.85000014,
+        "z": 0.0
+      },
+      "Size": {
+        "x": 3.16999984,
+        "y": 4.499998,
+        "z": 10.4000015
+      }
+    },
+    "colliders": [
+      {
+        "Size": {
+          "x": 2.47999954,
+          "y": 0.220000044,
+          "z": 10.0
+        },
+        "Center": {
+          "x": 0.0,
+          "y": 0.669999957,
+          "z": 0.0
+        },
+        "RequireVehicleMounted": false,
+        "RequireEngineOff": false,
+        "ExcludeLayers": -2147479040
+      },
+      {
+        "Size": {
+          "x": 2.47999954,
+          "y": 0.120000266,
+          "z": 10.0
+        },
+        "Center": {
+          "x": 0.0,
+          "y": 3.56000018,
+          "z": 0.0
+        },
+        "RequireVehicleMounted": false,
+        "RequireEngineOff": false,
+        "ExcludeLayers": -2147479040
+      },
+      {
+        "Size": {
+          "x": 1.0,
+          "y": 0.5400001,
+          "z": 5.59999847
+        },
+        "Center": {
+          "x": 0.0,
+          "y": 0.220000044,
+          "z": -2.10000014
+        },
+        "RequireVehicleMounted": false,
+        "RequireEngineOff": false,
+        "ExcludeLayers": -2147479040
+      },
+      {
+        "Size": {
+          "x": 0.07000005,
+          "y": 2.920002,
+          "z": 10.0
+        },
+        "Center": {
+          "x": 1.31999969,
+          "y": 2.13,
+          "z": 0.0
+        },
+        "RequireVehicleMounted": false,
+        "RequireEngineOff": false,
+        "ExcludeLayers": -2147479040
+      },
+      {
+        "Size": {
+          "x": 0.07000005,
+          "y": 2.920002,
+          "z": 10.0
+        },
+        "Center": {
+          "x": -1.32,
+          "y": 2.13,
+          "z": 0.0
+        },
+        "RequireVehicleMounted": false,
+        "RequireEngineOff": false,
+        "ExcludeLayers": -2147479040
+      }
+    ],
+    "wheels": [
+      {
+        "Location": {
+          "x": -1.5,
+          "y": 0.9,
+          "z": 1.6
+        },
+        "Radius": 0.425,
+        "SuspensionDistance": 0.1
+      },
+      {
+        "Location": {
+          "x": 1.5,
+          "y": 0.9,
+          "z": 1.6
+        },
+        "Radius": 0.425,
+        "SuspensionDistance": 0.1
+      },
+      {
+        "Location": {
+          "x": -1.5,
+          "y": 0.05,
+          "z": -4.5
+        },
+        "Radius": 0.425,
+        "SuspensionDistance": 0.3
+      },
+      {
+        "Location": {
+          "x": 1.5,
+          "y": 0.05,
+          "z": -4.5
+        },
+        "Radius": 0.425,
+        "SuspensionDistance": 0.3
+      }
+    ],
+    "groundOffset": 0.375,
+    "rootGroundOffset": 0.375,
+    "visualBoundsUnity": [
+      [
+        -1.3800000000000001,
+        -0.518,
+        -5.1834999999999996
+      ],
+      [
+        1.3800000000000001,
+        3.635,
+        5.116
+      ]
+    ],
+    "visualBoundsThree": [
+      [
+        -1.3800000000000001,
+        -0.518,
+        -5.116
+      ],
+      [
+        1.3800000000000001,
+        3.635,
+        5.1834999999999996
+      ]
+    ],
+    "renderedProps": 19,
+    "configuredProps": 23,
+    "triangles": 7054,
+    "bytes": 499440,
+    "coordinateConvention": "Unity native pivot; GLB reflects Z only (x,y,-z); no recentering",
+    "previewMode": "Lightweight custom trailer model; measured body dimensions, configured wheel layout and original Unity root preserved",
+    "unsupportedComponents": [],
+    "notes": [
+      "Custom visual approximation based on the supplied configurations and in-game reference images; no recentering.",
+      "Body dimensions measured from the original preview meshes; hidden rug backing and garage-door hardware are not modelled.",
+      "Tyres and hubs are solid custom geometry. Suspension is static.",
+      "Configured collision bounds and export coordinates are unchanged."
+    ],
+    "visualWheelCount": 4,
+    "modelOriginUnity": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "wheelLayoutSource": "Wheel PropConfig locations from supplied RustCar builds; Euro axle child offsets transformed by its configured 270 degree yaw."
+  },
+  {
+    "id": "euro",
+    "name": "Euro trailer \u00b7 Black",
+    "file": "models/trailer-euro.glb",
+    "model": "models/trailer-euro.glb",
+    "sourceFile": "eurotrailer_black.json",
+    "bounds": {
+      "Center": {
+        "x": 0,
+        "y": 1.1,
+        "z": 2.9
+      },
+      "Size": {
+        "x": 3.1,
+        "y": 4.1,
+        "z": 15.400002
+      }
+    },
+    "colliders": [],
+    "wheels": [
+      {
+        "Location": {
+          "x": -1.09,
+          "y": -0.68,
+          "z": 1.2890011
+        },
+        "Radius": 0.5,
+        "SuspensionDistance": 0.3
+      },
+      {
+        "Location": {
+          "x": 1.09,
+          "y": -0.68,
+          "z": 1.2890011
+        },
+        "Radius": 0.5,
+        "SuspensionDistance": 0.3
+      },
+      {
+        "Location": {
+          "x": -1.09,
+          "y": -0.68,
+          "z": -0.041
+        },
+        "Radius": 0.5,
+        "SuspensionDistance": 0.3
+      },
+      {
+        "Location": {
+          "x": 1.09,
+          "y": -0.68,
+          "z": -0.04099889
+        },
+        "Radius": 0.5,
+        "SuspensionDistance": 0.3
+      },
+      {
+        "Location": {
+          "x": -1.09,
+          "y": -0.68,
+          "z": -1.420999
+        },
+        "Radius": 0.5,
+        "SuspensionDistance": 0.3
+      },
+      {
+        "Location": {
+          "x": 1.09,
+          "y": -0.68,
+          "z": -1.420999
+        },
+        "Radius": 0.5,
+        "SuspensionDistance": 0.3
+      }
+    ],
+    "groundOffset": 1.18,
+    "rootGroundOffset": 1.18,
+    "visualBoundsUnity": [
+      [
+        -1.3745,
+        -1.141,
+        -4.8332615
+      ],
+      [
+        1.3745,
+        3.1895,
+        10.552644
+      ]
+    ],
+    "visualBoundsThree": [
+      [
+        -1.3745,
+        -1.141,
+        -10.552644
+      ],
+      [
+        1.3745,
+        3.1895,
+        4.8332615
+      ]
+    ],
+    "renderedProps": 60,
+    "configuredProps": 72,
+    "triangles": 7470,
+    "bytes": 353416,
+    "coordinateConvention": "Unity native pivot; GLB reflects Z only (x,y,-z); no recentering",
+    "previewMode": "Lightweight custom trailer model; measured body dimensions, configured wheel layout and original Unity root preserved",
+    "unsupportedComponents": [
+      {
+        "component": "prop-43",
+        "prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+        "reason": "Invisible collider helper; intentionally not rendered"
+      },
+      {
+        "component": "prop-44",
+        "prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+        "reason": "Invisible collider helper; intentionally not rendered"
+      },
+      {
+        "component": "prop-45",
+        "prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+        "reason": "Invisible collider helper; intentionally not rendered"
+      },
+      {
+        "component": "prop-46",
+        "prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+        "reason": "Invisible collider helper; intentionally not rendered"
+      },
+      {
+        "component": "prop-47",
+        "prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+        "reason": "Invisible collider helper; intentionally not rendered"
+      },
+      {
+        "component": "prop-48",
+        "prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+        "reason": "Invisible collider helper; intentionally not rendered"
+      },
+      {
+        "component": "prop-54",
+        "prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+        "reason": "Invisible collider helper; intentionally not rendered"
+      },
+      {
+        "component": "prop-55",
+        "prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+        "reason": "Invisible collider helper; intentionally not rendered"
+      },
+      {
+        "component": "prop-56",
+        "prefab": "assets/bundled/prefabs/modding/lootables/invisible/invisible_lootable_prefabs/invisible_crate_normal_2.prefab",
+        "reason": "Invisible collider helper; intentionally not rendered"
+      }
+    ],
+    "notes": [
+      "Custom visual approximation based on the supplied configurations and in-game reference images; no recentering.",
+      "Body dimensions measured from the original preview meshes; hidden rug backing and garage-door hardware are not modelled.",
+      "Tyres and hubs are solid custom geometry. Suspension is static.",
+      "Configured collision bounds and export coordinates are unchanged."
+    ],
+    "visualWheelCount": 6,
+    "modelOriginUnity": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "wheelLayoutSource": "Wheel PropConfig locations from supplied RustCar builds; Euro axle child offsets transformed by its configured 270 degree yaw."
+  }
+]
