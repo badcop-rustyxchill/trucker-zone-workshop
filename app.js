@@ -150,13 +150,13 @@ function buildTerrain(data){
   const mesh=new THREE.Mesh(g,terrainMaterial());mesh.userData.isTerrain=true;terrainRoot.add(mesh);terrainRoot.visible=$('show-terrain').checked;
 }
 async function selectMonument(m){
-  const token=++modelToken;state.ready=false;state.monument=m;state.index=points(state.config,m,state.tab).length?0:-1;setPlacing(false);gizmo.detach();$('loading').hidden=false;$('loading').querySelector('strong').textContent='Opening '+m.name;$('loading').querySelector('span:last-child').textContent='Loading local geometry…';$('monument-title').textContent=m.name;$('monument-category').textContent=m.category.toUpperCase();renderLibrary();
+  const token=++modelToken;state.ready=false;state.monument=m;state.index=points(state.config,m,state.tab).length?0:-1;setPlacing(false);gizmo.detach();$('loading').hidden=false;$('loading').querySelector('strong').textContent='Opening '+m.name;$('loading').querySelector('span:last-child').textContent='Loading…';$('monument-title').textContent=m.name;$('monument-category').textContent=m.category.toUpperCase();renderLibrary();
   try{
     const [gltf,terrain]=await Promise.all([loader.loadAsync(m.model),m.terrain?fetch(m.terrain).then(r=>{if(!r.ok)throw new Error('Terrain asset missing');return r.json();}):null]);
     if(token!==modelToken){disposeTree(gltf.scene);return;}
     disposeTree(modelRoot);modelRoot=greyPreview(gltf.scene);scene.add(modelRoot);modelRoot.updateMatrixWorld(true);buildTerrain(terrain);
     solidMeshes=[];modelRoot.traverse(o=>{if(o.isMesh)solidMeshes.push(o);});terrainRoot.traverse(o=>{if(o.isMesh)solidMeshes.push(o);});
-    renderLootSpawns();state.ready=true;$('loading').hidden=true;$('geometry-info').textContent=`${Math.round(m.triangles/1000)}K TRIANGLES · HIGH DETAIL`;$('terrain-info').textContent=terrain?'NATIVE TERRAIN TEMPLATE':'NO NATIVE TERRAIN · MODEL ONLY';
+    renderLootSpawns();state.ready=true;$('loading').hidden=true;$('geometry-info').textContent=`${Math.round(m.triangles/1000)}K TRIANGLES`;$('terrain-info').textContent=terrain?'Terrain':'No terrain template';
     grid.position.y=terrain?sampleTerrain(terrain,0,0)??0:0;frameMonument();refresh();persist();
   }catch(e){if(token!==modelToken)return;console.error(e);$('loading').querySelector('strong').textContent='Could not open this monument';$('loading').querySelector('span:last-child').textContent=e.message;toast('Could not load '+m.name+'. Check the local asset files.');}
 }
