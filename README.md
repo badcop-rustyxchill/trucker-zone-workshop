@@ -17,12 +17,12 @@ Monument settings also support enabled state, display name, allowed delivery-typ
 
 Changes autosave in the current browser. Use JSON exports for durable backups and moving between browsers. Undo/redo cover edits and imports. The bundled snapshot should not be assumed to be your latest production configuration.
 
-Fly camera: left-drag empty space or hold the right mouse button to look; WASD to fly, Q/E or Ctrl/Space down/up, Shift for faster movement. Wheel while looking adjusts speed. Orbit and Top modes are also available. Shortcuts: 1 move gizmo, 2 rotate gizmo, P place, F focus selection, Home fit monument, Delete remove, Ctrl+D duplicate, Ctrl+Z/Ctrl+Y undo/redo, Ctrl+S export, / search.
+Fly camera: left-drag empty space or hold the right mouse button to look; WASD to fly, Q/E or Space down/up, Shift for faster movement. Wheel while looking adjusts speed. Orbit and Top modes are also available. Shortcuts: 1 move gizmo, 2 rotate gizmo, P place, F focus selection, Home fit monument, Delete remove, Ctrl+D duplicate, Ctrl+Z/Ctrl+Y undo/redo, Ctrl+S export, / search.
 
 ## Geometry and accuracy
 
 - All 48 available monuments use the higher-detail local prefab models. No monument objects or vegetation are hidden. Foliage/fence cutout transparency and glass transparency are restored where indicated by the material names and source texture alpha.
-- Monument geometry is batched and shaded grey to reduce draw calls; source geometry and cutout masks are retained. Terrain uses natural grass, dirt and rock colours with repeating ground detail; arctic/desert monuments receive matching palettes. These surface colours are an approximation, not a live map biome/splatmap.
+- Monument geometry is batched and shaded grey to reduce draw calls; source geometry and cutout masks are retained. Terrain uses the native eight-channel monument splat masks with shaded ground colours and repeating surface detail. Material colours are simplified; surrounding server-map biome blending is not included.
 - The higher-detail monument model library is approximately 469 MB before compression. Geometry is loaded one monument at a time.
 - 43 available monuments include their own extracted heightmap templates, with terrain holes and placement influence where available. Locations without a standalone terrain template are explicitly labelled model-only. The editor does not invent terrain for these locations.
 - Templates describe monument-local terrain, not the surrounding terrain of a particular server map. Heightmaps are sampled to a 129×129 preview grid. Server-map terrain changes, player construction, live vehicles, and other runtime entities are not represented.
@@ -41,3 +41,5 @@ Three.js is bundled locally under vendor/three; its license is included there. R
 Loot locations are bundled locally from the dedicated-server monument prefab SpawnGroups and BaseSpawnPoints. No server plugin, connection or import is required. Blue areas show all possible points, including alternate loot choices and radial spawn areas; an individual point can be empty while awaiting loot or because another position was chosen. The overlay uses prefab bounds plus a 0.2 m footprint margin and does not predict the currently active loot population. Server plugins and custom maps that move or add loot locations are outside the standard monument data.
 
 Drop-to-ground spawn heights are aligned to the bundled monument preview surfaces and heightmap where available. These heights describe the local template; a particular server map can change the surrounding terrain. Original source spawn transforms are retained in the bundled data.
+
+Click empty space to deselect. Hold right mouse to rotate in Fly or Orbit mode. Ctrl enables 0.01 m translation snapping and 1 degree rotation snapping; Q/E handle vertical camera movement. Optional Prefab bounds display the source build bounds, not a collision verdict.

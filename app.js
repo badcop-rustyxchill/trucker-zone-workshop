@@ -13,6 +13,7 @@ const $ = id => document.getElementById(id);
 const STORAGE='trucker-zone-workshop-v1';
 const state={catalog:[],trailers:[],config:null,monument:null,tab:'spawns',index:-1,placing:false,mode:'translate',top:false,ready:false,undo:[],redo:[],documentName:'TruckerEvent.json'};
 let renderer,scene,camera,orbit,gizmo,proxy,modelRoot,terrainRoot,zoneRoot,trailerRoot,grid,fly;
+let fineAdjust=false;
 let navigation='fly',lastHover=0,lootRoot,lootData={monuments:{}};
 const activeLoot=()=>lootData.monuments[state.monument?.id];
 let nativeTerrain=null,solidMeshes=[],modelToken=0,toastTimer,dragBefore=null,syncing=false,renderNeeded=true;
@@ -81,7 +82,7 @@ function initScene(){
   renderer.domElement.setAttribute('aria-label','3D monument. Right mouse looks around; WASD flies through the scene. Q and E move down and up. Shift moves faster. Use Place to position a point.');renderer.domElement.tabIndex=0;
   scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x374343,.00075);scene.add(new THREE.HemisphereLight(0xe4e8ed,0x60646b,1.5));const sun=new THREE.DirectionalLight(0xffffff,1.8);sun.position.set(-160,240,100);scene.add(sun);
   camera=new THREE.PerspectiveCamera(48,1,.1,12000);camera.position.set(80,65,85);
-  orbit=new OrbitControls(camera,renderer.domElement);orbit.enableDamping=true;orbit.dampingFactor=.12;orbit.maxPolarAngle=Math.PI*.93;orbit.minDistance=.8;orbit.maxDistance=4000;orbit.addEventListener('change',invalidate);orbit.enabled=false;
+  orbit=new OrbitControls(camera,renderer.domElement);orbit.mouseButtons.RIGHT=THREE.MOUSE.ROTATE;orbit.enableDamping=true;orbit.dampingFactor=.12;orbit.maxPolarAngle=Math.PI*.93;orbit.minDistance=.8;orbit.maxDistance=4000;orbit.addEventListener('change',invalidate);orbit.enabled=false;
   fly=new FlyControls(camera,renderer.domElement,invalidate,looking=>{document.body.classList.toggle('mouse-look',looking);if(gizmo){gizmo.enabled=!looking&&!state.placing;gizmo.getHelper().visible=!looking&&!!selectedPoint();}},()=>!state.placing&&!gizmo?.axis&&!gizmo?.dragging);
   proxy=new THREE.Object3D();scene.add(proxy);gizmo=new TransformControls(camera,renderer.domElement);gizmo.setSpace('local');gizmo.setSize(.85);scene.add(gizmo.getHelper());
   gizmo.addEventListener('dragging-changed',e=>{orbit.enabled=!e.value&&navigation==='orbit';fly.setEnabled(!e.value&&navigation==='fly');if(e.value)dragBefore=clone(state.config);else if(dragBefore){if(JSON.stringify(dragBefore)!==JSON.stringify(state.config))checkpoint(dragBefore);dragBefore=null;persist();refresh();}});
@@ -110,11 +111,11 @@ function pointerAt(e){const r=renderer.domElement.getBoundingClientRect();pointe
 function handleViewportClick(e){
   if(!state.ready)return;pointerAt(e);
   if(state.placing){const hit=raycaster.intersectObjects(solidMeshes,false)[0];if(!hit){toast('Click a monument or terrain surface.');return;}if(!selectedPoint()){addPoint(fromView(hit.point));setPlacing(false);return;}edit(()=>{const p=fromView(hit.point);p.y=round(p.y+(state.tab==='spawns'?activeGroundOffset():0));selectedPoint()['Local position']=p;});setPlacing(false);return;}
-  const hit=raycaster.intersectObjects([zoneRoot,trailerRoot],true).find(h=>h.object.userData.pointIndex!==undefined);if(hit){state.tab=hit.object.userData.tab;state.index=hit.object.userData.pointIndex;refresh();persist();}
+  const hit=raycaster.intersectObjects([zoneRoot,trailerRoot],true).find(h=>h.object.userData.pointIndex!==undefined);if(hit){state.tab=hit.object.userData.tab;state.index=hit.object.userData.pointIndex;refresh();persist();}else{state.index=-1;refresh();persist();}
 }
 function setPlacing(value){state.placing=value;document.body.classList.toggle('placing',value);$('tool-place').classList.toggle('active',value);$('placement-hint').textContent=value?'Click a surface to place the selected point · Esc to cancel':(navigation==='fly'?'Mouse drag look · WASD fly · Q/E down/up · Shift faster':'Drag to orbit · Right-drag to pan · Scroll to zoom');if(gizmo)gizmo.enabled=!value&&!fly?.looking;}
 function setMode(mode){state.mode=mode;gizmo.setMode(mode);$('tool-move').classList.toggle('active',mode==='translate');$('tool-rotate').classList.toggle('active',mode==='rotate');setPlacing(false);syncProxy();invalidate();}
-function updateSnap(){const enabled=$('snap-enabled').checked;gizmo?.setTranslationSnap(enabled?Number($('snap-step').value):null);gizmo?.setRotationSnap(enabled?Math.PI/12:null);}
+function updateSnap(){const enabled=$('snap-enabled').checked||fineAdjust;gizmo?.setTranslationSnap(enabled?(fineAdjust?.01:Number($('snap-step').value)):null);gizmo?.setRotationSnap(enabled?(fineAdjust?Math.PI/180:Math.PI/12):null);}
 function syncProxy(){if(!gizmo)return;syncing=true;const p=selectedPoint();if(p){proxy.position.set(...toView(p['Local position']));proxy.quaternion.copy(quatFromUnity(p['Local rotation']));gizmo.attach(proxy);gizmo.enabled=!state.placing&&!fly?.looking;gizmo.visible=true;if(state.tab==='deliveries'&&state.mode==='rotate'){state.mode='translate';gizmo.setMode('translate');$('tool-move').classList.add('active');$('tool-rotate').classList.remove('active');}}else gizmo.detach();$('tool-rotate').disabled=state.tab!=='spawns'||!p;syncing=false;}
 function renderZones(){
   if(!zoneRoot)return;clearGroup(zoneRoot);
@@ -225,6 +226,9 @@ function wireUI(){
   on('help','click',()=>$('guide-dialog').showModal());document.querySelectorAll('.dialog-close,.dialog-done').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
   on('copy-json','click',()=>{const data=exportConfig(state.config);$('json-title').textContent=state.monument.name;$('json-preview').textContent=JSON.stringify({[settingsKey(data,state.monument)]:settings(data,state.monument)??{}},null,2);$('json-dialog').showModal();});
   on('copy-json-text','click',async()=>{try{await navigator.clipboard.writeText($('json-preview').textContent);toast('Monument JSON copied.');}catch{toast('Select the JSON text and use Ctrl+C.');}});on('export-monument','click',()=>download(JSON.parse($('json-preview').textContent),state.monument.id+'-zones.json'));
+  document.addEventListener('keydown',e=>{if(e.key==='Control'){fineAdjust=true;updateSnap();}});
+  document.addEventListener('keyup',e=>{if(e.key==='Control'){fineAdjust=false;updateSnap();}});
+  window.addEventListener('blur',()=>{fineAdjust=false;updateSnap();});
   document.addEventListener('keydown',e=>{if(e.target.matches('input,select,textarea')||document.querySelector('dialog[open]'))return;const key=e.key.toLowerCase();if((e.ctrlKey||e.metaKey)&&key==='z'){e.preventDefault();restoreHistory(e.shiftKey?'redo':'undo');}else if((e.ctrlKey||e.metaKey)&&key==='y'){e.preventDefault();restoreHistory('redo');}else if((e.ctrlKey||e.metaKey)&&key==='d'){e.preventDefault();duplicatePoint();}else if((e.ctrlKey||e.metaKey)&&key==='s'){e.preventDefault();saveConfig();}else if(key==='1')setMode('translate');else if(key==='2'&&state.tab==='spawns')setMode('rotate');else if(key==='p')$('tool-place').click();else if(key==='f')frameSelection();else if(key==='home'){e.preventDefault();frameMonument();}else if(key==='escape')setPlacing(false);else if(key==='delete')deletePoint();else if(key==='/'){e.preventDefault();$('search').focus();}else if(key==='?')$('guide-dialog').showModal();});
 }
 async function start(){

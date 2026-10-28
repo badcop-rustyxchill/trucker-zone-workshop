@@ -3,6 +3,12 @@ import * as THREE from 'three';
 // Appearance only: native height samples, holes and placement coordinates stay intact.
 export function terrainColour(data,x,z,id=''){
   const i=z*data.width+x,h=data.heights[i];
+  if(data.splat){
+    const palette=[0x8c795a,0xdce2df,0xb7a17b,0x77766e,0x6e804a,0x4b5d35,0x969285,0x858177];
+    const result=new THREE.Color(0,0,0);let sum=0;
+    for(let ch=0;ch<8;ch++){const w=((data.splatMask??255)&(1<<ch))?data.splat[i*8+ch]:0;if(w){const c=new THREE.Color(palette[ch]);result.r+=c.r*w;result.g+=c.g*w;result.b+=c.b*w;sum+=w;}}
+    if(sum)return result.multiplyScalar(1/sum);
+  }
   const dx=data.size.x/(data.width-1),dz=data.size.z/(data.height-1);
   const sx=(data.heights[z*data.width+Math.min(x+1,data.width-1)]-data.heights[z*data.width+Math.max(0,x-1)])/(2*dx);
   const sz=(data.heights[Math.min(z+1,data.height-1)*data.width+x]-data.heights[Math.max(0,z-1)*data.width+x])/(2*dz);
